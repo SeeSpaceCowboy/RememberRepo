@@ -30,6 +30,8 @@ int toInt(string s) {
     return answ;
 }
 int max(int a, int b) => (a > b) ? a : b;
+
+
 int blockChain(int b1, int b2) {
     if (b1 == b2) return b1 * 5;
     if (b1 > b2) return (b2 + 1) + (b2 * 2);
