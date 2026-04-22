@@ -1,10 +1,15 @@
 Remembering of a Git and training for the interships
 
 Kontur:
-- Pretty simple tasks, except summer contests
+
+* Pretty simple tasks, except summer contests
 
 T-Bank:
-- *haven't seen tasks*
+
+* _haven't seen tasks_
+
+UPT: Partial solutions are shown in “all\_solutions”  branch
 
 CBR:
-- Remember statisics and DS. Algoritms isn't so hard
+
+* Remember statisics and DS. Algoritms isn't so hard
