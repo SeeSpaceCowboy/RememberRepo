@@ -2,18 +2,26 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
 
-// Неполное решение
-
 public class Main {
-    public static int pow10(int i) {
-        int base = 1;
+    public static long pow10(int i) {
+        long base = 1;
         while (i > 0) {
             base *= 10;
             --i;
         }
         return base;
     }
-    public static int nNumb(int numb, int n) {
+    public static int smallify(int n) {
+        int answ = 0;
+        int base = 1;
+        while (n / 10 > 0) {
+            answ += (n % 10) * base;
+            base *= 10;
+            n /= 10;
+        }
+        return answ;
+    }
+    public static long nNumb(int numb, int n) {
         while (n > 0) {
             numb /= 10;
             --n;
@@ -22,7 +30,7 @@ public class Main {
     }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int answ = 0;
+        long answ = 0;
         int n, m, inp, base, len;
         n = input.nextInt();
         m = input.nextInt();
@@ -57,7 +65,11 @@ public class Main {
                     --m;
                 }
                 if (i != 0) {
-                    array_data[i - 1][array_len[i - 1]] = temp[j];
+                    if (temp[j] < pow10(i)) {
+                        array_data[i - 1][array_len[i - 1]] = temp[j];
+                    } else {
+                        array_data[i - 1][array_len[i - 1]] = smallify(temp[j]);
+                    }
                     ++array_len[i - 1];
                 }
             }
